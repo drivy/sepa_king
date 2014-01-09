@@ -28,7 +28,7 @@ describe SEPA::CreditTransferTransaction do
       end
 
       it 'should fail for invalid attributes' do
-        SEPA::CreditTransferTransaction.new(:bic => nil).should_not be_schema_compatible('pain.001.002.03')
+        SEPA::CreditTransferTransaction.new(:bic => nil).should_not be_schema_compatible('pain.001.005.03')
         SEPA::CreditTransferTransaction.new(:bic => 'SPUEDE2UXXX', :service_level => 'URGP').should_not be_schema_compatible('pain.001.002.03')
       end
     end
